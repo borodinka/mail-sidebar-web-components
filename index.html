@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gmail Sidebar</title>
+	<link rel="stylesheet" href="menu.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<script src="javascript.js" defer></script>
+</head>
+<body>
+	<header>
+		<div class="tooltip hamburger">
+			<div></div>
+			<span class="tooltiptext">Main menu</span>
+		</div>
+		<h2 id="logo">📬 Mail App</h2>
+	</header>
+	<main>
+		<button id="compose"><i class="fa-solid fa-pencil"></i>Compose</button>
+		<button class="menu-item"><span>📥</span>Inbox</button>
+		<button class="menu-item"><span>⭐️</span>Starred</button>
+		<button class="menu-item"><span>⏱</span>Snoozed</button>
+		<button class="menu-item"><span>➡️</span>Sent</button>
+		<app-sidebar-button text="Drafts" unreadCount="1">
+			<span slot="icon">📄</span>
+		</app-sidebar-button>
+	</main>
+
+	<template id="app-sidebar-button-template">
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			.sidebar-button {
+				font-size: 18px;
+				font-family: Arial, Helvetica, sans-serif;
+				color: var(--secondary-color);
+				border: none;
+				background: none;
+				display: flex;
+				width: 250px;
+				border-top-right-radius: 20px;
+				border-bottom-right-radius: 20px;
+				padding: 8px 40px;
+			}
+
+			.button-text {
+				font-weight: 550;
+			}
+
+			.sidebar-button:hover {
+				background: #f4f4f4;
+				cursor: pointer;
+			}
+
+			.sidebar-button .button-text {
+				margin-left: 25px;
+			}
+
+			#unreadCount {
+				margin-left: 90px;
+				font-size: 16px;
+			}
+
+		</style>
+		<button class="sidebar-button">
+			<slot name="icon"></slot>
+			<span class="button-text"></span>
+			<span id="unreadCount"></span>
+		</button>
+	</template>
+</body>
+</html>
