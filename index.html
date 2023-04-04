@@ -12,18 +12,18 @@
 </head>
 <body>
 	<header>
-		<div class="tooltip hamburger">
+		<div class="menu__tooltip menu__hamburger">
 			<div></div>
-			<span class="tooltiptext">Main menu</span>
+			<span class="menu__tooltiptext">Main menu</span>
 		</div>
 		<h2 id="logo">📬 Mail App</h2>
 	</header>
 	<main>
-		<button id="compose"><i class="fa-solid fa-pencil"></i>Compose</button>
-		<button class="menu-item"><span>📥</span>Inbox</button>
-		<button class="menu-item"><span>⭐️</span>Starred</button>
-		<button class="menu-item"><span>⏱</span>Snoozed</button>
-		<button class="menu-item"><span>➡️</span>Sent</button>
+		<button id="button__composer"><i class="fa-solid fa-pencil"></i>Compose</button>
+		<button class="menu__item"><span>📥</span>Inbox</button>
+		<button class="menu__item"><span>⭐️</span>Starred</button>
+		<button class="menu__item"><span>⏱</span>Snoozed</button>
+		<button class="menu__item"><span>➡️</span>Sent</button>
 		<app-sidebar-button text="Drafts" unreadCount="1">
 			<span slot="icon">📄</span>
 		</app-sidebar-button>
@@ -50,7 +50,7 @@
 				padding: 8px 40px;
 			}
 
-			.button-text {
+			.button__text {
 				font-weight: 550;
 			}
 
@@ -59,11 +59,11 @@
 				cursor: pointer;
 			}
 
-			.sidebar-button .button-text {
+			.sidebar-button .button__text {
 				margin-left: 25px;
 			}
 
-			#unreadCount {
+			.button__unread-counter {
 				margin-left: 90px;
 				font-size: 16px;
 			}
@@ -71,8 +71,8 @@
 		</style>
 		<button class="sidebar-button">
 			<slot name="icon"></slot>
-			<span class="button-text"></span>
-			<span id="unreadCount"></span>
+			<span class="button__text"></span>
+			<span class="button__unread-counter"></span>
 		</button>
 	</template>
 </body>
