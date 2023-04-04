@@ -35,23 +35,23 @@ header {
 	color: var(--secondary-color);
 }
 
-#compose, .menu-item {
+#button__composer, .menu__item {
 	font-size: 18px;
 	color: var(--secondary-color);
 }
 
-#compose {
+#button__composer {
 	background: #c2e8fe;
 	padding: 20px;
 	margin: 15px;
 	border-radius: 20px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	gap: 1.2rem;
 }
 
-#compose:hover {
+#button__composer i {
+	margin-right: 20px;
+}
+
+#button__composer:hover {
 	box-shadow: 1px 1px 5px 2px rgba(114, 114, 114, 0.39);
 }
 
@@ -69,7 +69,7 @@ main button span {
 	margin-right: 25px;
 }
 
-.menu-item {
+.menu__item {
 	display: flex;
 	width: 250px;
 	border-top-right-radius: 20px;
@@ -77,6 +77,6 @@ main button span {
 	padding: 8px 40px;
 }
 
-.menu-item:hover {
+.menu__item:hover {
 	background: #f4f4f4;
 }
