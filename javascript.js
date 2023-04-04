@@ -13,8 +13,8 @@ class AppSidebarButton extends HTMLElement {
 		const text = this.getAttribute('text');
 		const unreadCount = this.getAttribute('unreadCount');
 	
-		this.shadowRoot.querySelector('.button-text').innerText = text;
-		this.shadowRoot.querySelector('#unreadCount').innerText = unreadCount;
+		this.shadowRoot.querySelector('.button__text').innerText = text;
+		this.shadowRoot.querySelector('.button__unread-counter').innerText = unreadCount;
 	}
 }
 
