@@ -1,5 +1,5 @@
 /* Hamburger menu */
-header .hamburger {
+header .menu__hamburger {
 	position: absolute;
     top: 5px;
     left: 15px;
@@ -13,14 +13,14 @@ header .hamburger {
     justify-content: center;
 }
 
-header .hamburger:hover {
+header .menu__hamburger:hover {
 	background: #f4f4f4;
 	border-radius: 50%;
   cursor: pointer;
 }
 
 /* Hamburger Line */
-header .hamburger > div {
+header .menu__hamburger > div {
     position: relative;
     flex: none;
     width: 100%;
@@ -32,8 +32,8 @@ header .hamburger > div {
 }
 
 /* Hamburger Lines - Top & Bottom */
-header .hamburger > div::before,
-header .hamburger > div::after {
+header .menu__hamburger > div::before,
+header .menu__hamburger > div::after {
     content: '';
     position: absolute;
     z-index: 1;
@@ -43,18 +43,18 @@ header .hamburger > div::after {
     background: inherit;
 }
 
-header .hamburger > div::after {
+header .menu__hamburger > div::after {
 	top: 7px;
 }
 
 /* Tooltip container */
-.tooltip {
+.menu__tooltip {
 	position: relative;
 	display: inline-block;
   }
   
   /* Tooltip text */
-  .tooltip .tooltiptext {
+  .menu__tooltip .menu__tooltiptext {
     visibility: hidden;
     width: 100px;
     background-color: var(--secondary-color);
@@ -69,6 +69,6 @@ header .hamburger > div::after {
   }
   
   /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
+  .menu__tooltip:hover .menu__tooltiptext {
     visibility: visible;
   }
