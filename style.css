@@ -1,6 +1,9 @@
 :root {
 	--primary-color: #fff;
 	--secondary-color: #444;
+	--composer-bg-color: #c2e8fe;
+	--shadow-color: rgba(114, 114, 114, 0.39);
+	--menu-bg-color: #f4f4f4;
 }
 
 * {
@@ -38,7 +41,7 @@ header {
 #button__composer {
 	font-size: 18px;
 	color: var(--secondary-color);
-	background: #c2e8fe;
+	background: var(--composer-bg-color);
 	padding: 20px;
 	margin: 15px;
 	border-radius: 20px;
@@ -49,5 +52,5 @@ header {
 }
 
 #button__composer:hover {
-	box-shadow: 1px 1px 5px 2px rgba(114, 114, 114, 0.39);
+	box-shadow: 1px 1px 5px 2px var(--shadow-color);
 }
