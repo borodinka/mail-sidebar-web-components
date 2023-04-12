@@ -20,16 +20,16 @@
 	</header>
 	<main>
 		<button id="button__composer"><i class="fa-solid fa-pencil"></i>Compose</button>
-		<app-sidebar-button text="Inbox" unreadCount="">
+		<app-sidebar-button text="Inbox" selected="true">
 			<span slot="icon">📥</span>
 		</app-sidebar-button>
-		<app-sidebar-button text="Starred" unreadCount="">
+		<app-sidebar-button text="Starred">
 			<span slot="icon">⭐️</span>
 		</app-sidebar-button>
-		<app-sidebar-button text="Snoozed" unreadCount="">
+		<app-sidebar-button text="Snoozed">
 			<span slot="icon">⏱</span>
 		</app-sidebar-button>
-		<app-sidebar-button text="Sent" unreadCount="">
+		<app-sidebar-button text="Sent">
 			<span slot="icon">➡️</span>
 		</app-sidebar-button>
 		<app-sidebar-button text="Drafts" unreadCount="1">
@@ -48,7 +48,7 @@
 			.sidebar-button {
 				font-size: 18px;
 				font-family: Arial, Helvetica, sans-serif;
-				color: var(--secondary-color);
+				color: #444;
 				border: none;
 				background: none;
 				display: flex;
