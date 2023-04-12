@@ -12,6 +12,7 @@ class AppSidebarButton extends HTMLElement {
 	
 		const text = this.getAttribute('text');
 		const unreadCount = this.getAttribute('unreadCount');
+		const isSelected = this.getAttribute('selected');
 	
 		const buttonText = this.shadowRoot.querySelector('.button__text');
 		buttonText.innerText = text;
@@ -19,15 +20,14 @@ class AppSidebarButton extends HTMLElement {
 		unreadCounter.innerText = unreadCount;
 		const sidebarButton = this.shadowRoot.querySelector('.sidebar-button');
 
-		if (unreadCount > 0) {
+		if (unreadCount > 0 || isSelected === 'true') {
 			buttonText.style['font-weight'] = 550;
 			unreadCounter.style['font-weight'] = 550;
 		}
 
-		if (text === 'Inbox') {
+		if (isSelected === 'true') {
 			sidebarButton.style['background'] = "#d3e3fd";
 			buttonText.style['color'] = "#051d49";
-			buttonText.style['font-weight']	= 600;
 		}
 	}
 }
