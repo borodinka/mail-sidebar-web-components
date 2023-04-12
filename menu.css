@@ -14,7 +14,7 @@ header .menu__hamburger {
 }
 
 header .menu__hamburger:hover {
-	background: #f4f4f4;
+	background: var(--menu-bg-color);
 	border-radius: 50%;
   cursor: pointer;
 }
@@ -68,6 +68,7 @@ header .menu__hamburger > div::after {
     z-index: 1;
   }
   
+  /* Show the tooltip text when you mouse over the tooltip container */
   .menu__tooltip:hover .menu__tooltiptext {
     visibility: visible;
   }
